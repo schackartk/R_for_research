@@ -24,11 +24,15 @@ For instance, both _Terminal_ and _Console_ can return the current working direc
 
 In _Terminal_ you would enter the command
 
-`$ pwd`
+```
+$ pwd
+```
 
 In _Console_ you would use the R function
 
-`> getwd()`
+```
+> getwd()
+```
 
 From now on, if not explicitly stated, using the `$` will indicate a command that should be entered at the _Terminal_, while a `>` will indicate a command to be entered at the _Console_.
 
@@ -40,7 +44,9 @@ In some ways, this simplifies development.
 
 To illustrate this, we can create a list called "names" by entering this in the _Console_:
 
-`> names <- c("John", "Jay", "Rich")`
+```
+> names <- c("John", "Jay", "Rich")
+```
 
 *Note*:
 
@@ -76,27 +82,39 @@ Now that we have a new file in our repository, it is a good chance to add it to 
 
 At this point, git sees that there is a new file which is not currently being tracked. You can see this by entering
 
-`$ git status`
+```
+$ git status
+```
 
 At the _Terminal_ enter
 
-`$ git add create_names.R`
+```
+$ git add create_names.R
+```
 
 This has told git, "Hey, start keeping track of this file". You can see that git now knows the file is being tracked with
 
-`$ git status`
+```
+$ git status
+```
 
 Next we will commit this change to our repo (the change being adding the file) with a descriptive `-m`essage such as
 
-`$ git commit -m 'add create_names.R'`
+```
+$ git commit -m 'add create_names.R'
+```
 
 Once you have added a file to git and committed that add, when you make changes you will specify the file you are committing changes for. For instance, if you make a change to the file such as adding a new name, you would then enter
 
-`$ git commit -m 'add a new name' create_names.R
+```
+$ git commit -m 'add a new name' create_names.R
+```
 
 You can make as many local commits as you want, but eventually, you will want to push it to your GitHub repository to keep it backed up.
 
-`$ git push`
+```
+$ git push
+```
 
 ## Summary
 
