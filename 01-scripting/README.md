@@ -24,13 +24,13 @@ For instance, both _Terminal_ and _Console_ can return the current working direc
 
 In _Terminal_ you would enter the command
 
-```
+```console
 $ pwd
 ```
 
 In _Console_ you would use the R function
 
-```
+```r
 > getwd()
 ```
 
@@ -44,7 +44,7 @@ In some ways, this simplifies development.
 
 To illustrate this, we can create a list called "names" by entering this in the _Console_:
 
-```
+```r
 > names <- c("John", "Jay", "Rich")
 ```
 
@@ -82,37 +82,49 @@ Now that we have a new file in our repository, it is a good chance to add it to 
 
 At this point, git sees that there is a new file which is not currently being tracked. You can see this by entering
 
-```
+```console
 $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example_create_names.R
 ```
 
 At the _Terminal_ enter
 
-```
+```console
 $ git add create_names.R
 ```
 
 This has told git, "Hey, start keeping track of this file". You can see that git now knows the file is being tracked with
 
-```
+```console
 $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   example_create_names.R
 ```
 
 Next we will commit this change to our repo (the change being adding the file) with a descriptive `-m`essage such as
 
-```
+```console
 $ git commit -m 'add create_names.R'
 ```
 
 Once you have added a file to git and committed that add, when you make changes you will specify the file you are committing changes for. For instance, if you make a change to the file such as adding a new name, you would then enter
 
-```
+```console
 $ git commit -m 'add a new name' create_names.R
 ```
 
 You can make as many local commits as you want, but eventually, you will want to push it to your GitHub repository to keep it backed up.
 
-```
+```console
 $ git push
 ```
 
@@ -128,5 +140,5 @@ $ git push
   
 ## Bonus
 
-It is important to know how to use git from the command line, because it is consistent across any language or project, whether you are using R, Python, or Rust. However, I wanted to note that most IDEs (such as RStudio) have git integration. In Rstudio, you can click the git button next to the `Go to file/function` bar and select commit. This can be useful for seeing how files have changed, commiting and pushing changes.
+It is important to know how to use git from the command line, because it is consistent across any language or project, whether you are using R, Python, or Rust. However, I wanted to note that most IDEs (such as RStudio) have git integration. In RStudio, you can click the git button next to the `Go to file/function` bar and select commit. This can be useful for seeing how files have changed, commiting and pushing changes.
 
