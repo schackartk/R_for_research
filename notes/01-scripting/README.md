@@ -42,7 +42,7 @@ Since R is scripting language, it is not compiled. In compiled languages, source
 
 In some ways, this simplifies development.
 
-To illustrate this, we can create a list called "names" by entering this in the _Console_:
+To illustrate this, we can create a vector called "names" by entering this in the _Console_:
 
 ```
 > names <- c("John", "Jay", "Rich")
@@ -56,7 +56,7 @@ To illustrate this, we can create a list called "names" by entering this in the 
 
   * Also, keep in mind that `==` is used for comparisons, like `if (name == "John") {do something}`
 
-* `c()` is simply shorthand notation for the `list()` function
+* `c()` is simply shorthand notation for the `vector()` function
 
 
 While you can create the `names` list by entering the above command at the _Console_ for most purposes, you will enter code in a script.
